@@ -1,0 +1,145 @@
+html{
+  --header : 56px;
+  --sidebar : 240px;
+}
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+body{
+  font-family: "Roboto", sans-serif;;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top:0px;
+  background-color: antiquewhite;
+}
+nav{
+  width: 97vw;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  height:var(--header);
+  gap: 50px;
+}
+.left{
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  gap:20px;
+}
+.mid{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  gap:5px;
+}
+.Search{
+  /* position: relative; */
+  border: solid 1px black;
+  border-radius: 40px;
+  display: flex;
+}
+.fa-magnifying-glass{
+  /* position: absolute; */
+  left:125px;
+  /* right:582px; */
+  background-color: grey;
+  width: 40px;
+  border-radius: 0px 40px 40px 0px;
+}
+
+.right{
+  display: flex;
+  justify-content: flex-end;
+  gap:10px ;
+  align-items: center;
+  flex-grow: 2;
+}
+.circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:30px;
+  height:30px;
+  border-radius: 100%;
+  border: 1px solid red;
+  background-color: grey;
+}
+.mid input{
+  flex-grow: 1;
+  border-radius: 40px;
+  border: none;
+  min-width: 300px;
+}
+
+i{
+  font-size: 20px;
+}
+
+.container-2{
+  display: flex;
+}
+
+.side-bar{
+  border:1px dashed blue;
+  width:var(--sidebar);
+  display:flex;
+  flex-direction: column;
+  height: 800px;
+  gap:16px;
+  overflow: auto;
+  padding: 15px;
+}
+.side1 div:hover{
+  background-color: gold;
+}
+.side2 div:hover{
+  background-color: gold;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  border:1px solid red;
+  flex-grow: 1;
+  width:calc(100% - var(--sidebar))
+}
+.side1{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 204px;
+  height: auto;
+}
+.side2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  width: 204px;
+  height: auto;
+}
+
+@media(max-width:600px){
+  input{
+    display: none;
+  }
+  .fa-magnifying-glass{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+  .side-bar{
+    display:none;
+  }
+  .content{
+    justify-content: center;
+  }
+
+}
